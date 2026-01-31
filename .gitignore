@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Vercel (build draait op Vercel; dist niet committen)
+.vercel
+
+# Editor directories en bestanden
 .vscode/*
 !.vscode/extensions.json
 .idea
