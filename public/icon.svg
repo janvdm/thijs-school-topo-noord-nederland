@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="100%" style="stop-color:#fde68a"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Simplified north NL shape (Groningen, Friesland, Drenthe, Flevoland) -->
+  <path fill="url(#land)" stroke="#92400e" stroke-width="12" stroke-linejoin="round"
+    d="M 120 180 L 200 140 L 280 130 L 380 140 L 440 180 L 460 260 L 440 340 L 380 380 L 280 400 L 200 380 L 140 320 Z"/>
+  <!-- Small "T" for Thijs / Topo -->
+  <text x="256" y="290" font-family="system-ui, sans-serif" font-size="140" font-weight="800" fill="#1e293b" text-anchor="middle">T</text>
+</svg>
