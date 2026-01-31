@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# 🗺️ Thijs Topo Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Een vrolijke topografie-quiz om te oefenen voor je proefwerk! Weet jij waar Groningen, Friesland, de Waddenzee en alle steden liggen? Speel de game en word een echte kaartkampioen. 🏆
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Wat is dit?
 
-## React Compiler
+**Thijs Topo Game** is een educatieve quiz voor de noordelijke provincies van Nederland. De kaart is gebaseerd op echt huiswerk — je oefent op dezelfde kaart als in je schrift. Klik de juiste plek aan, krijg direct feedback, en zie je cijfer op een schaal van 1–10 (zoals op school). Met leuke geluidjes en een blij poppetje na elke vraag! 🎉
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Provincies:** Groningen, Friesland, Drenthe, Flevoland (A–D)
+- **Steden:** Groningen, Leeuwarden, Assen, Lelystad, Almere, Sneek, Heerenveen, Delfzijl, Emmen (1–9)
+- **Eilanden:** Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog + Oostvaardersplassen (a–f)
+- **Wateren:** IJsselmeer, Noordzee, Waddenzee (I–III)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Hoe is dit gemaakt?
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+De game is gebouwd met een modern web-stack:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Onderdeel | Tech |
+|-----------|------|
+| **Framework** | [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
+| **Build & dev** | [Vite](https://vitejs.dev/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Animaties** | [Framer Motion](https://www.framer.com/motion/) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Geluiden** | Web Audio API (geen externe bestanden) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+De **kaart** is een echte foto van het huiswerk als achtergrond, met klikbare markers eroverheen. Cijfers worden berekend op de Nederlandse 1–10 schaal, met kwalificaties als *Onvoldoende*, *Matig*, *Voldoende*, *Goed* en *Zeer goed*.
+
+---
+
+## 🚀 Lokaal draaien
+
+```bash
+# Dependencies installeren
+npm install
+
+# Development server (met hot reload)
+npm run dev
+
+# Productie-build maken
+npm run build
+
+# Productie-build lokaal bekijken
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Daarna open je in je browser de URL die in de terminal staat (meestal `http://localhost:5173`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 Online spelen
+
+De game kan worden gedeployed op o.a. **Vercel** of **GitHub Pages**, zodat Thijs (of wie dan ook) hem gewoon in de browser kan openen — geen dev server nodig!
+
+---
+
+## 📄 Licentie
+
+Dit project is gemaakt voor Thijs om topo te oefenen. Veel succes met je proefwerk! 🎓✨
